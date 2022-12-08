@@ -1,0 +1,25 @@
+--Dice Game--
+
+Live @ https://macks-dice-game.vercel.app/
+
+Technologies used:
+
+- html5
+- CSS
+- JavaScript
+- Google APIs
+- vs code
+
+Dice Game User Stories:
+
+1. As a user, I can roll the dice and the value will be anywhere between 1 and 6.
+
+2. As a user I can hold that number and let the next player roll or roll the dice again to gain more points.
+
+3. As a user every roll after the 1st roll is a risk because if the dice lands on 1 my current points will be erased, I’ll have to start over from 0 points and my turn will end but my held (saved) point will remain the same.
+
+4. As a user if I roll a 2, 3, 4, 5, or 6 that number will be added to my current score but lost if I roll a 1.
+
+5. As a user I can win the game and all the glory if I reach 100 held (saved) points before the other player.
+
+I created the Dice Game to learn, practice, and sharpen my DOM manipulation skills. I’m a student currently pursuing my BS Degree in Software Development and a challenging web development class that I have requires me to thoroughly know DOM manipulation. So, I utilized my DOM manipulation knowledge to start the project and finished the project by learning and increasing my DOM manipulation skills!
