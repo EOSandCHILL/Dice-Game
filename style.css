@@ -34,9 +34,6 @@ body {
   justify-content: center;
 }
 
-.gamename {
-}
-
 /* LAYOUT */
 main {
   position: relative;
@@ -143,16 +140,6 @@ main {
   box-shadow: 0 0 15px 0 #c7365f inset, 0 0 20px 5px #ffffff;
 }
 
-/* 
-
-USE IF YOU WANT TO ADD EMOJIS
-
-.btn::first-letter {
-  font-size: 2.4rem;
-  display: inline-block;
-  margin-right: 0.7rem;
-} */
-
 .btn--new {
   top: 4rem;
 }
@@ -161,6 +148,10 @@ USE IF YOU WANT TO ADD EMOJIS
 }
 .btn--hold {
   top: 46.1rem;
+}
+
+.btn--instructions {
+  top: 52rem;
 }
 
 .btn:active {
@@ -193,4 +184,46 @@ USE IF YOU WANT TO ADD EMOJIS
 
 .hidden {
   display: none;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: white;
+  padding: 10px 20px; /* Reduced padding at top and bottom */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-content h2,
+.modal-content p,
+.modal-content ol {
+  font-size: 1.6rem; /* Larger text */
+  font-weight: bold; /* Bold text */
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+}
+
+.modal-content ol {
+  margin-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px; /* Adjusted higher */
+  right: 10px; /* Closer to the top-right corner */
+  font-size: 2rem;
+  cursor: pointer;
 }

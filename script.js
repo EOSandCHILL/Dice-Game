@@ -13,6 +13,11 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+// Modal elements
+const modal = document.querySelector('.modal');
+const btnInstructions = document.querySelector('.btn--instructions');
+const closeBtn = document.querySelector('.close-btn');
+
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
@@ -24,7 +29,6 @@ const switchPlayer = function () {
 let scores, currentScore, activePlayer, playing;
 
 // starting conditions
-
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
@@ -63,11 +67,6 @@ btnRoll.addEventListener('click', function () {
         currentScore;
     } else {
       // switch to next player
-      // document.getElementById(`current--${activePlayer}`).textContent = 0;
-      // currentScore = 0;
-      // activePlayer = activePlayer === 0 ? 1 : 0;
-      // player0El.classList.toggle('player--active');
-      // player1El.classList.toggle('player--active');
       switchPlayer();
     }
   }
@@ -75,12 +74,12 @@ btnRoll.addEventListener('click', function () {
 
 btnHold.addEventListener('click', function () {
   if (playing) {
-    // 1. Add current score to active players score
+    // 1. Add current score to active player's score
     scores[activePlayer] += currentScore;
-    // scores[1] = scores[1] + currentScore
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
-    // 2. Check if players score is >= 100
+
+    // 2. Check if player's score is >= 100
     if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
@@ -92,11 +91,27 @@ btnHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
     } else {
-      // Finish game
-      // Switch
+      // Switch to the next player
       switchPlayer();
     }
   }
 });
 
 btnNew.addEventListener('click', init);
+
+// Open modal on button click
+btnInstructions.addEventListener('click', function () {
+  modal.classList.remove('hidden');
+});
+
+// Close modal when the close button is clicked
+closeBtn.addEventListener('click', function () {
+  modal.classList.add('hidden');
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', function (e) {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});

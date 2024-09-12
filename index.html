@@ -34,8 +34,33 @@
         <button class="btn btn--new">New game</button>
         <button class="btn btn--roll">Roll dice</button>
         <button class="btn btn--hold">Hold</button>
+        <button class="btn btn--instructions">Instructions</button>
       </main>
     </div>
+
+    <!-- Modal -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Game Instructions</h2>
+        <p>Welcome to The Dice Game!</p>
+        <p>Rules:</p>
+        <ol>
+          <li>Each player takes turns rolling the dice.</li>
+          <li>
+            If a player rolls a 1, they lose all their current round points and
+            it becomes the next player's turn.
+          </li>
+          <li>
+            If the player holds, they add their current round points to their
+            total score.
+          </li>
+          <li>The first player to reach 100 points wins the game!</li>
+        </ol>
+        <p>Good luck!</p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
